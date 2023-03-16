@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndlessTerrain : MonoBehaviour
 {
-    public const float maxViewDist = 45 0;
+    public const float maxViewDist = 450;
     public Transform viewer;
 
     public static Vector2 viewerPosition;
