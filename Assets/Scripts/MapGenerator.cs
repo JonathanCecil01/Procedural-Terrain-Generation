@@ -39,6 +39,11 @@ public class MapGenerator : MonoBehaviour
     Queue<MapThreadInfo<MapData>> mapDataThreadInfoQueue = new Queue<MapThreadInfo<MapData>>();
     Queue<MapThreadInfo<MeshData>> meshDataThreadInfoQueue = new Queue<MapThreadInfo<MeshData>>();
     
+
+    public GameObject Rabbit;
+
+    public GameObject Carrot;
+
     void Awake(){
         fallOfMap = FallOffMapGenerator.GenerateFallOffMap(mapChunkSize);
     }
@@ -130,6 +135,7 @@ public class MapGenerator : MonoBehaviour
                     noiseMap[x, y] = Mathf.Clamp(noiseMap[x ,y]-fallOfMap[x, y], 0, 1);
                 }
                 float currentHeight = noiseMap[x, y];
+                
                 for(int i=0;i<regions.Length;i++){
                     if(currentHeight >= regions [i].height){
                         colourMap[ y*mapChunkSize+x] = regions[i].colour;
