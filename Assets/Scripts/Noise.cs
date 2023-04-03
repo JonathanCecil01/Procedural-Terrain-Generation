@@ -13,7 +13,7 @@ public static class Noise
         float frequency = 1;
 
 
-        for(int i = 0; i < octaves;i++)
+        for(int i = 0; i < octaves;i++) 
         {
             float offsetX = prng.Next(-100000, 100000) + offset.x;
             float offsetY  = prng.Next(-100000, 100000) - offset.y;
